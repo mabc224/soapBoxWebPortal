@@ -5,10 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AgGridModule } from 'ag-grid-angular';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [AppComponent, DashboardComponent],
-    imports: [BrowserModule, AppRoutingModule, AgGridModule.withComponents([])],
+    imports: [BrowserModule, FormsModule, AppRoutingModule, AgGridModule.withComponents([])],
     providers: [],
     bootstrap: [AppComponent]
 })
