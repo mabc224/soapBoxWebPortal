@@ -4,6 +4,6 @@
   </h4>
 </div>
 <input type="text" [(ngModel)]="quickFilter" (input)="onFilterTextChanged($event)">
-<ag-grid-angular style="width: 500px; height: 500px;" class="ag-theme-material" [rowData]="rowData" [columnDefs]="columnDefs"
+<ag-grid-angular style="width: 100%; height: 500px;" class="ag-theme-material" [rowData]="rowData" [columnDefs]="columnDefs"
   [gridOptions]="gridOptions">
 </ag-grid-angular>

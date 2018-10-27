@@ -6,7 +6,7 @@ import { AppConfig } from '../../app.settings';
 @Injectable({
     providedIn: 'root'
 })
-export class DashboardService extends BaseHttpService {
+export class CustomerService extends BaseHttpService {
     // tslint:disable-next-line:max-line-length
     private shipStationCustomersParams = '?stateCode=&countryCode=&tagId=&marketplaceId=&sortBy=&sortDir=ASC&page=1&pageSize=100';
     constructor(httpClient: HttpClient) {
