@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { GridOptions } from 'ag-grid-community';
+import { DashboardService } from './dashboard.service';
 
 @Component({
     selector: 'app-dashboard',
@@ -15,9 +16,13 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     public gridOptions: GridOptions = {};
     quickFilter: string;
 
-    constructor() {}
+    constructor(private dashboardService: DashboardService) {}
 
-    ngOnInit() {}
+    ngOnInit() {
+        this.dashboardService.getCustomers().subscribe(res => {
+            console.log(res);
+        });
+    }
 
     ngAfterViewInit(): void {}
 
