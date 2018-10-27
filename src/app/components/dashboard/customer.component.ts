@@ -20,6 +20,9 @@ export class CustomerComponent implements OnInit, AfterViewInit {
     public quickFilter: string;
     public customersData: CustomerModel;
 
+    public pagination = true;
+    public paginationAutoPageSize = true;
+
     constructor(private customerService: CustomerService) {}
 
     ngOnInit() {
