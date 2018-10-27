@@ -3,9 +3,13 @@
     Welcome to {{ title }}!
   </h4>
 </div>
-Global Data Search : <input type="text" [(ngModel)]="quickFilter" (input)="onFilterTextChanged($event)">
+<form class="searchInput">
+  <mat-form-field class="searchInput">
+    <input placeholder="Search..." type="text" matInput [(ngModel)]="quickFilter" name="searchControl" (input)="onFilterTextChanged($event)">
+  </mat-form-field>
+</form>
 <hr>
-<ag-grid-angular style="width: 100%; height: 400px;" class="ag-theme-balham-dark" [rowData]="rowData" [columnDefs]="columnDefs"
-  [gridOptions]="gridOptions" [pagination]="pagination" [paginationAutoPageSize]="paginationAutoPageSize"
+<ag-grid-angular style="width: 100%; height: 400px;" class="ag-theme-balham-dark" [rowData]="rowData"
+  [columnDefs]="columnDefs" [gridOptions]="gridOptions" [pagination]="pagination" [paginationAutoPageSize]="paginationAutoPageSize"
   [enableColResize]="true">
 </ag-grid-angular>
